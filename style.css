@@ -1,26 +1,51 @@
-html, body {
-    height: 100;
+body {
+    background-color: gainsboro !important;
 }
 
 .container {
     display: flex;
-    padding: 20px;
-    justify-content: space-between;
-    align-items:flex-start;
-    background-color: whitesmoke;
-    height: 100%;
+    background-color: white;
+    min-height: 100vh;
+    flex-direction: column;
+    box-shadow: 0 3px 10px rgb(0 0 0 /0.3);
+    position: relative
+    
+    
+}
+#navbar {
+    display: flex;
+    max-width: 100px;
+    position: absolute;
+    top: 110px;
+    left: 1;
 }
 
-
-
-.currentWeather24HourCard {
+.title {
     display: flex;
-    flex: none;
-    flex-direction: column;
+    background-color: lightskyblue;
+    padding: 1em;
+    justify-content: center;
     align-items: center;
+    margin-top: 0.5em;
+    box-shadow: 0 3px 10px rgb(0 0 0 /0.3);
+
+    
+}
+
+.cards {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content:space-evenly;
+    margin: 2em;
+}
+ .currentWeather24HourCard {
+    display: flex;
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
 }
 .currentWeatherCard {
     display: flex;
@@ -30,6 +55,8 @@ html, body {
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: lightblue;
+    flex-wrap: wrap;
 }
 .currentWeatherAlertsCard {
     display: flex;
@@ -39,6 +66,8 @@ html, body {
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: lightyellow;
+    
 }
 
 .currentWeatherCardBody {
@@ -50,7 +79,6 @@ html, body {
 .currentWeather24HourCardBody{
     padding: 1em
 }
-
 
 .contactCard {
     display: flex;
@@ -67,5 +95,14 @@ html, body {
     padding: 1rem
 }
 
+#sun {
+    display: flex;
+    width: 70px;
+    align-items: flex-start;
+    
+}
 
-
+.subcontainer {
+    display: flex;
+    margin-left: auto;
+}

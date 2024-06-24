@@ -60,8 +60,8 @@ fetch(alertsUrl)
   });
 
 const wfo = 'SLC';
-const x = 20;
-const y = 19;
+const x = 19;
+const y = 20;
 const forecastHourlyUrl = `https://api.weather.gov/gridpoints/${wfo}/${x},${y}/forecast/hourly`;
 
 fetch(forecastHourlyUrl)
@@ -73,21 +73,60 @@ fetch(forecastHourlyUrl)
   })
   .then(forecastData => {
     const periods = forecastData.properties.periods;
-    const chartData = periods.map(period => ({
-      Time: period.startTime,
-      Temperature: period.temperature
-    }));
+
+
+      const chartData = periods.slice(0, 24).map(period => ({
+        Time: new Date(period.startTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        Temperature: period.temperature
+      }));
+    //const chartData = periods.map(period => ({
+    //  Time: period.startTime,
+    //  Temperature: period.temperature
+    
 
     new Chart(
-      document.getElementById('acquisitions'),
+      document.getElementById('24HourForecast'),
       {
         type: 'bar',
+        options: {
+          aspectRatio: 1.5,
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Time',
+                min: 24,
+                max:24
+              },
+              ticks: {
+                maxRotation: 45,
+                minRotation: 45
+              }
+            },
+            y: {
+              title: {
+                display: true,
+                text: 'Temperature (°F)'
+              },
+              suggestedMin: 0,
+              suggestedMax: 120
+            }
+          },
+          plugins: {
+            title: {
+              display: true,
+              text: '24-Hour Temperature Forecast'
+            }
+          }
+        },
         data: {
           labels: chartData.map(data => data.Time),
           datasets: [
             {
               label: 'Temperature',
-              data: chartData.map(data => data.Temperature)
+              data: chartData.map(data => data.Temperature),
+              borderColor: 'rgba(75,192,192,0.2)',
+              tension: 0.1
             }
           ]
         }
