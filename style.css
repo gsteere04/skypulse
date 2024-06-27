@@ -8,10 +8,9 @@ body {
     min-height: 100vh;
     flex-direction: column;
     box-shadow: 0 3px 10px rgb(0 0 0 /0.3);
-    position: relative
-    
-    
+    position: relative;
 }
+
 #navbar {
     display: flex;
     max-width: 100px;
@@ -28,8 +27,7 @@ body {
     align-items: center;
     margin-top: 0.5em;
     box-shadow: 0 3px 10px rgb(0 0 0 /0.3);
-
-    
+    border-radius: 12px;
 }
 
 .cards {
@@ -37,69 +35,71 @@ body {
     flex-direction: row-reverse;
     flex-wrap: wrap;
     overflow: hidden;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     margin: 2em;
 }
- .currentWeather24HourCard {
-    display: flex;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: white;
-}
-.currentWeatherCard {
-    display: flex;
-    flex: none;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: lightblue;
-    flex-wrap: wrap;
-}
-.currentWeatherAlertsCard {
-    display: flex;
-    flex: none;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: lightyellow;
-    
-}
 
-.currentWeatherCardBody {
-    padding: 1rem
-}
-.currentWeatherAlertsCardBody {
-    padding: 1em
-}
-.currentWeather24HourCardBody{
-    padding: 1em
-}
-
+.currentWeather24HourCard,
+.currentWeatherCard,
+.currentWeatherAlertsCard,
 .contactCard {
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 1em;
+    margin: 1em;
+    background-color: white; 
 }
-.contactCardBody{
-    padding: 1rem
+
+.currentWeatherCardBody,
+.currentWeatherAlertsCardBody,
+.currentWeather24HourCardBody,
+.contactCardBody {
+    padding: 1rem;
 }
-.emailCardTitle {
-    padding: 1rem
+
+#contactCardNames {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#contactCardFname,
+#contactCardLname {
+    margin-right: 10px;
+    max-width: 100px;
+}
+
+#fname,
+#lname {
+    max-width: 100px;
+}
+
+#email {
+    width: 215px;
+}
+
+#contactCardEmail {
+    display: flex;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+#message {
+    width: 215px;
+    height: 200px;
+    vertical-align: top;
+}
+
+#submit {
+    width: 215px;
 }
 
 #sun {
     display: flex;
     width: 70px;
     align-items: flex-start;
-    
 }
 
 .subcontainer {
