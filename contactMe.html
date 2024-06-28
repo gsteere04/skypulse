@@ -22,37 +22,58 @@
       </div>
       <div class="cards">
         <div class="contactCard">
-          <div id="contactCardNames" class="d-flex">
-            <div id="contactCardFname" class="me-3">
-              <form>
-                <label for="fname">First name:</label><br />
-                <input type="text" id="fname" name="fname" /><br />
-              </form>
-            </div>
-            <div id="contactCardLname">
-              <form>
-                <label for="lname">Last name:</label><br />
-                <input type="text" id="lname" name="lname" /><br />
-              </form>
-            </div>
-          </div>
+          <h1>Let us help.</h1>
           <div id="contactCardEmail">
-            <form>
-              <label for="email">Email:</label><br />
-              <input type="text" id="email" name="email" /><br />
+            <form action="https://formsubmit.co/gsteere4717@xmail.dixietech.edu" method="post">
+              <div class="firstRow">
+                <div class="fullNameArea">
+                  <p class="cardHead">Name</p>
+                  <input class="fullName" type="text">
+                </div>
+                <div class="emailArea">
+                  <p class="cardHead">Email Address</p>
+                  <input class="email" type="email">
+                </div>
+              </div>
+              <div class="messageArea">
+                <p class="cardHead">Message</p>
+                <textarea class="message" cols="90" rows="10"></textarea>
+              </div>
+              <button type="submit">Send</button>
             </form>
-          </div>
-          <div id="contactCardMessage">
-            <form>
-              <label for="message">Message:</label><br>
-              <textarea id="message" name="message"></textarea><br>
-            </form>
-          </div>
-          <div id="submit">
-            <input id="submit" type="submit" value="Send message">
           </div>
         </div>
       </div>
+      <nav class="navbar flex-direction-column" id="navbar">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutPage.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactMe.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

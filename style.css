@@ -1,10 +1,10 @@
 body {
-    background-color: gainsboro !important;
+    background-color:   #73787C  !important;
 }
 
 .container {
     display: flex;
-    background-color: white;
+    background-color: #c5c5c5;
     min-height: 100vh;
     flex-direction: column;
     box-shadow: 0 3px 10px rgb(0 0 0 /0.3);
@@ -21,13 +21,13 @@ body {
 
 .title {
     display: flex;
-    background-color: lightskyblue;
+    background-color: #d7e5f0;
     padding: 1em;
     justify-content: center;
     align-items: center;
     margin-top: 0.5em;
     box-shadow: 0 3px 10px rgb(0 0 0 /0.3);
-    border-radius: 12px;
+    border-radius: 5PXpx;
 }
 
 .cards {
@@ -60,41 +60,6 @@ body {
     padding: 1rem;
 }
 
-#contactCardNames {
-    display: flex;
-    margin-bottom: 10px;
-}
-
-#contactCardFname,
-#contactCardLname {
-    margin-right: 10px;
-    max-width: 100px;
-}
-
-#fname,
-#lname {
-    max-width: 100px;
-}
-
-#email {
-    width: 215px;
-}
-
-#contactCardEmail {
-    display: flex;
-    justify-self: center;
-    margin-top: 10px;
-}
-
-#message {
-    width: 215px;
-    height: 200px;
-    vertical-align: top;
-}
-
-#submit {
-    width: 215px;
-}
 
 #sun {
     display: flex;
