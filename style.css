@@ -1,24 +1,65 @@
+/* General reset and body styling */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
 body {
-    background-color:   #73787C  !important;
+    background-color: #73787C !important;
+    color: #333;
 }
 
+/* General container styling */
 .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Card styles for all cards */
+.currentWeather24HourCard,
+.currentWeatherCard,
+.currentWeatherAlertsCard,
+.contactCard,
+.faqCard {
     display: flex;
-    background-color: #c5c5c5;
-    min-height: 100vh;
     flex-direction: column;
-    box-shadow: 0 3px 10px rgb(0 0 0 /0.3);
-    position: relative;
+    align-items: center;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #ffffff;
+    max-width: 100%;
+    border-radius: 8px;
 }
 
-#navbar {
-    display: flex;
-    max-width: 100px;
-    position: absolute;
-    top: 110px;
-    left: 1;
+/* Card body styles */
+.currentWeatherCardBody,
+.currentWeatherAlertsCardBody,
+.currentWeather24HourCardBody,
+.contactCardBody {
+    padding: 1rem;
+    color: #333;
 }
 
+/* Title section styling */
 .title {
     display: flex;
     background-color: #d7e5f0;
@@ -26,48 +67,89 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 0.5em;
-    box-shadow: 0 3px 10px rgb(0 0 0 /0.3);
-    border-radius: 5PXpx;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
+/* About and FAQ section styling */
+.about-section,
+.faq-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* About and FAQ headings */
+.about-section h2,
+.faq-section h2 {
+    font-size: 1.8rem;
+    color: #0057b8;
+    margin-bottom: 10px;
+}
+
+/* About and FAQ paragraphs */
+.about-section p,
+.faq-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* List styling for About section */
+.about-section ul,
+.faq-section ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.about-section ul li,
+.faq-section ul li {
+    list-style-type: disc;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0057b8;
+    color: #ffffff;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Navbar styling */
+#navbar {
+    display: flex;
+    max-width: 100px;
+    position: absolute;
+    top: 110px;
+    left: 1;
+    background-color: #c5c5c5;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Flex layout for cards container */
 .cards {
     display: flex;
-    flex-direction: row-reverse;
     flex-wrap: wrap;
-    overflow: hidden;
     justify-content: space-evenly;
-    margin: 2em;
+    margin: 2em 0;
 }
 
-.currentWeather24HourCard,
-.currentWeatherCard,
-.currentWeatherAlertsCard,
-.contactCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    padding: 1em;
-    margin: 1em;
-    background-color: white; 
+/* Additional utility styles */
+.message-box {
+    display: none;
+    margin-top: 10px;
 }
-
-.currentWeatherCardBody,
-.currentWeatherAlertsCardBody,
-.currentWeather24HourCardBody,
-.contactCardBody {
-    padding: 1rem;
-}
-
 
 #sun {
     display: flex;
     width: 70px;
     align-items: flex-start;
-}
-
-.subcontainer {
-    display: flex;
-    margin-left: auto;
 }

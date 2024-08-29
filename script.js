@@ -1,4 +1,5 @@
 "use strict";
+
 const latitude = 37.0965;
 const longitude = -113.5684;
 
@@ -73,16 +74,10 @@ fetch(forecastHourlyUrl)
   })
   .then(forecastData => {
     const periods = forecastData.properties.periods;
-
-
-      const chartData = periods.slice(0, 24).map(period => ({
-        Time: new Date(period.startTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        Temperature: period.temperature
-      }));
-    //const chartData = periods.map(period => ({
-    //  Time: period.startTime,
-    //  Temperature: period.temperature
-    
+    const chartData = periods.slice(0, 24).map(period => ({
+      Time: new Date(period.startTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      Temperature: period.temperature
+    }));
 
     new Chart(
       document.getElementById('24HourForecast'),
@@ -95,8 +90,6 @@ fetch(forecastHourlyUrl)
               title: {
                 display: true,
                 text: 'Time',
-                min: 24,
-                max:24
               },
               ticks: {
                 maxRotation: 45,
@@ -136,3 +129,22 @@ fetch(forecastHourlyUrl)
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);
   });
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('.questionBtn').addEventListener('click', function () {
+    showMessageBox('question');
+  });
+  document.querySelector('.feedbackBtn').addEventListener('click', function () {
+    showMessageBox('feedback');
+  });
+  document.querySelector('.bugReportBtn').addEventListener('click', function () {
+    showMessageBox('bugreport');
+  });
+
+  function showMessageBox(type) {
+    document.querySelectorAll('.message-box').forEach(box => {
+      box.style.display = 'none';
+    });
+    document.getElementById(type).style.display = 'block';
+  }
+});
